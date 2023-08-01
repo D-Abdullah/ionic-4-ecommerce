@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
 import { LoadingController, ModalController } from '@ionic/angular';
 import { NavParams } from '@ionic/angular';
 import { Settings } from '../data/settings';
@@ -10,11 +9,11 @@ import { Settings } from '../data/settings';
     styleUrls: ['./filter.page.scss'],
 })
 export class FilterPage implements OnInit {
-    price: any = {lower: 0, upper: 1000};
+    price: any = { lower: 0, upper: 1000 };
     attributes: any;
     id: any;
     filter: any;
-    constructor(public api: ApiService, public loadingController: LoadingController, public modalCtrl: ModalController, public settings: Settings, public navParams: NavParams) {}
+    constructor(public loadingController: LoadingController, public modalCtrl: ModalController, public settings: Settings, public navParams: NavParams) { }
     ngOnInit() {
         this.filter = this.navParams.data.filter;
         this.attributes = this.navParams.data.attributes;

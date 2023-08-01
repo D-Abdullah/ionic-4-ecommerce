@@ -48,30 +48,30 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-  AppComponent,
-  FilterPage,
-  OrderSummaryPage
-  //HomePage
+    AppComponent,
+    FilterPage,
+    OrderSummaryPage
+    //HomePage
   ],
   entryComponents: [
-  FilterPage,
-  OrderSummaryPage
-  //HomePage
+    FilterPage,
+    OrderSummaryPage
+    //HomePage
   ],
-  imports: [BrowserModule, 
-  FormsModule, 
-  HttpClientModule,
-   KeysPipeModule,
+  imports: [BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    KeysPipeModule,
     IonicModule.forRoot(),
-     AppRoutingModule,
-      TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [HttpClient]
-        }
-      })
-     ],
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
+  ],
 
   providers: [
     StatusBar,
@@ -96,4 +96,4 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
